@@ -1,0 +1,93 @@
+/* ====================== *STYLEGLOBAL: 공통 STYLE ====================== */
+/* 폰트 설정 */
+/* 폰트 설정 */
+/* PAPERLOGY 폰트 - CDN 우선, 로컬 fallback */
+@font-face {
+    font-family: 'PAPERLOGY';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2'),
+        url('../fonts/Paperlogy-4Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PAPERLOGY';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2'),
+        url('../fonts/Paperlogy-5Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PAPERLOGY';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2') format('woff2'),
+        url('../fonts/Paperlogy-6SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PAPERLOGY';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2'),
+        url('../fonts/Paperlogy-7Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PAPERLOGY';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2'),
+        url('../fonts/Paperlogy-8ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* 기본 설정 */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PAPERLOGY', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    box-sizing: border-box;
+    color: var(--bs-black2);
+}
+
+/* 색상 변수 */
+:root {
+    --bs-black: #000000;
+    --bs-black2: #141414;
+    --bs-white: #ffffff;
+    --bs-gray: #b7b7b7;
+    --bs-blue: #4a82ff;
+    --bs-bg-gray: #f0f2f7;
+    --bs-bg-gray2: #eef1f5;
+}
+
+/* 컨테이너 */
+.container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ====================== 반응형 ====================== */
+/* *STYLEMEDIA: 공통 - 태블릿 (1200px 이하) */
+@media (max-width: 1200px) {
+}
+
+/* *STYLEMEDIA: 공통 - 모바일 대 (768px 이하) */
+@media (max-width: 768px) {
+}
+
+/* *STYLEMEDIA: 공통 - 모바일 소 (480px 이하) */
+@media (max-width: 480px) {
+}
