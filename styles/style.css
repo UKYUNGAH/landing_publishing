@@ -502,8 +502,6 @@
 
     .situation .status .item {
         padding: 15px 18px;
-        flex-direction: column;
-        align-items: flex-start;
     }
 
     .situation .status .s_left {
