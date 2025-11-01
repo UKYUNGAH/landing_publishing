@@ -91,6 +91,7 @@
 
 .landing .benefit img {
     max-width: 170px;
+    display: block;
 }
 
 /* 케어 영역 */
@@ -266,7 +267,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 15px;
+    gap: 5px;
 }
 
 .landing .apply .location_item {
@@ -450,7 +451,7 @@
     .landing .banner img {
         height: 100%;
     }
-    
+
     .landing .banner p {
         font-size: 16px;
         margin: 0 0 16px 0;
