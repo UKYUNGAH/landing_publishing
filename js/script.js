@@ -525,7 +525,7 @@ function updateStatusList() {
 
     // 새 항목 슬라이드 인 애니메이션
     const newItemElement = statusContainer.querySelector('.slide-in');
-    newItemElement.style.transform = 'translateY(-100%)';
+    newItemElement.style.transform = 'translateY(-60%)';
     newItemElement.style.opacity = '0';
 
     setTimeout(() => {
