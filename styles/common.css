@@ -47,6 +47,15 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'JalnanGothicT';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff'),
+        url('../fonts/JalnanGothicTTF.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* 기본 설정 */
 html {
     font-size: 62.5%;
@@ -68,6 +77,9 @@ body {
     --bs-white: #ffffff;
     --bs-gray: #b7b7b7;
     --bs-blue: #4a82ff;
+    --bs-green: #d7e9b5;
+    --bs-yellow: #ffecb6;
+    --bs-sky-blue: #dfe9ff;
     --bs-bg-gray: #f0f2f7;
     --bs-bg-gray2: #eef1f5;
 }
@@ -77,17 +89,4 @@ body {
     width: 100%;
     max-width: 700px;
     margin: 0 auto;
-}
-
-/* ====================== 반응형 ====================== */
-/* *STYLEMEDIA: 공통 - 태블릿 (1200px 이하) */
-@media (max-width: 1200px) {
-}
-
-/* *STYLEMEDIA: 공통 - 모바일 대 (768px 이하) */
-@media (max-width: 768px) {
-}
-
-/* *STYLEMEDIA: 공통 - 모바일 소 (480px 이하) */
-@media (max-width: 480px) {
 }

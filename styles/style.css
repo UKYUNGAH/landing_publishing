@@ -1,15 +1,580 @@
 /* ====================== 랜딩 페이지   ====================== */
 /* *STYLEPAGE: landing - 랜딩 페이지 */
 
+/* 배너 영역 */
+.landing .banner {
+    position: relative;
+}
+
+.landing .banner img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.landing .banner .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+}
+
+.landing .banner p {
+    position: relative;
+    margin: 0 0 20px 0;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 10px 57px 10px 14px;
+    border: 2px solid var(--bs-blue);
+    display: inline-block;
+    line-height: 1;
+}
+
+.landing .banner p::after {
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 100%;
+    background-color: var(--bs-blue);
+    top: 0;
+    right: 0;
+    background-color: var(--bs-blue);
+    background-image: url('../images/search_i.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 22px 22px;
+}
+
+.landing .banner h2 {
+    font-size: 52px;
+    font-family: 'JalnanGothicT', 'PAPERLOGY', sans-serif;
+}
+
+.landing .banner span {
+    color: var(--bs-blue);
+}
+
+/* 혜택, 케어 영역 공통 텍스트 */
+.landing .text_wrap {
+    text-align: center;
+}
+
+.landing .text_wrap p {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.landing .text_wrap h3 {
+    font-size: 28px;
+    font-family: 'JalnanGothicT', 'PAPERLOGY', sans-serif;
+}
+
+.landing .text_wrap span {
+    color: var(--bs-blue);
+}
+
+/* 혜택 영역 */
+.landing .benefit {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background: var(--bs-bg-gray);
+    padding-top: 68px;
+    gap: 100px;
+}
+
+.landing .benefit .left {
+    margin-bottom: 68px;
+}
+
+.landing .benefit img {
+    max-width: 170px;
+}
+
+/* 케어 영역 */
+.landing .care {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 45px 0 50px;
+}
+
+.landing .care img {
+    max-width: 260px;
+}
+
+/* 현황 영역 */
+.situation {
+    padding: 58px;
+    background: var(--bs-bg-gray2);
+}
+
+.situation h3 {
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.situation .status {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.situation .status .item {
+    background: var(--bs-white);
+    border: 2px solid var(--bs-blue);
+    border-radius: 5px;
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 20px rgba(74, 130, 255, 0.08);
+    transition: all 0.3s ease;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    min-height: 78px;
+}
+
+.situation .status .s_left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.situation .status .badge {
+    width: 68px;
+    text-align: center;
+    font-size: 11px;
+    padding: 6px 0;
+    border-radius: 25px;
+}
+
+.situation .status .badge.badge1 {
+    background: var(--bs-green);
+}
+
+.situation .status .badge.badge2 {
+    background: var(--bs-yellow);
+}
+
+.situation .status .type {
+    font-size: 11px;
+    padding: 6px 0;
+    width: 84px;
+    text-align: center;
+    border-radius: 25px;
+    background: var(--bs-sky-blue);
+}
+
+.situation .status .name {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.situation .status .description {
+    font-size: 12px;
+    font-weight: 400;
+    word-break: keep-all;
+}
+
+.situation .status .amount {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.situation .status .slide-in {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+/* 신청 영역 */
+.landing .apply {
+    padding: 64px 0 58px;
+    background: var(--bs-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing .apply span {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--bs-white);
+    text-align: center;
+}
+
+.landing .apply h3 {
+    margin-bottom: 32px;
+    font-size: 32px;
+    color: var(--bs-white);
+    font-family: 'JalnanGothicT', 'PAPERLOGY', sans-serif;
+    text-align: center;
+}
+
+.landing .apply .form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.landing .apply .group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.landing .apply .f_label {
+    font-size: 26px;
+    color: var(--bs-white);
+    margin-right: 32px;
+    text-align: end;
+    width: 70px;
+}
+
+.landing .apply .f_input {
+    width: 445px;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    background: var(--bs-white);
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.landing .apply .f_input::placeholder {
+    color: var(--bs-gray);
+}
+
+.landing .apply .group2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.landing .apply .location_group {
+    width: calc(100% - 102px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.landing .apply .location_item {
+    width: 50%;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    background: var(--bs-white);
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.landing .apply .custom_select {
+    position: relative;
+}
+
+.landing .apply select {
+    text-align: center;
+    color: var(--bs-gray);
+    width: 100%;
+    text-align: center;
+}
+
+.landing .apply select.selected {
+    color: var(--bs-black);
+}
+
+.landing .apply .custom_select::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    transform: translateY(-50%);
+    background: url('../images/arr_down.png') center center / contain no-repeat;
+}
+
+.landing .submit_btn {
+    width: 100%;
+    padding: 20px;
+    background: var(--bs-white);
+    color: var(--bs-blue);
+    border-radius: 12px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'JalnanGothicT', 'PAPERLOGY', sans-serif;
+}
+
+.landing .submit_btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background: #f8f9ff;
+}
+
+.landing .submit_btn:active {
+    transform: translateY(0);
+}
+
 /* ====================== 반응형 스타일 ====================== */
-/* *STYLEMEDIA: 페이지 - 태블릿 (1200px 이하) */
-@media (max-width: 1200px) {
+/* *STYLEMEDIA: 페이지 - 700px 이하 */
+@media (max-width: 700px) {
+    /* 배너 영역 */
+    .landing .banner p {
+        font-size: 22px;
+    }
+
+    .landing .banner h2 {
+        font-size: 46px;
+    }
+
+    /* 혜택, 케어 영역 */
+
+    .landing .benefit img {
+        max-width: 150px;
+    }
+
+    .landing .care img {
+        max-width: 200px;
+    }
+
+    .landing .text_wrap p {
+        font-size: 22px;
+        margin-bottom: 35px;
+    }
+
+    .landing .text_wrap h3 {
+        font-size: 26px;
+    }
+
+    /* 현황 영역 */
+    .situation {
+        padding: 58px 45px;
+    }
+
+    .situation h3 {
+        font-size: 28px;
+    }
+
+    .situation .status .item {
+        gap: 12px;
+        padding: 18px 20px;
+        min-height: 110px;
+    }
+
+    .situation .status .s_left {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .situation .status .badge {
+        padding: 5px 10px;
+    }
+
+    .situation .status .type {
+        padding: 5px 10px;
+        width: 70px;
+    }
+
+    .situation .status .name {
+    }
+
+    .situation .status .description {
+        margin-top: 5px;
+        width: 100%;
+    }
+    .situation .status .description br {
+        display: none;
+    }
+
+    .situation .status .amount {
+        align-self: flex-end;
+        margin-top: 10px;
+    }
+
+    .landing .apply {
+    }
+
+    .landing .apply span {
+    }
+
+    .landing .apply h3 {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    .landing .apply .f_label {
+        font-size: 22px;
+        margin-bottom: 5px;
+    }
+
+    .landing .apply .f_input {
+        font-size: 20px;
+        padding: 12px 0;
+    }
+
+    .landing .apply .location_group {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .landing .apply .location_item {
+        width: 100%;
+        font-size: 20px;
+        padding: 12px 0;
+    }
+
+    .landing .submit_btn {
+        padding: 18px;
+    }
 }
 
-/* *STYLEMEDIA: 페이지 - 모바일 대 (768px 이하) */
-@media (max-width: 768px) {
-}
+/* *STYLEMEDIA: 페이지 - 600px 이하 */
+@media (max-width: 600px) {
+    .landing .banner p {
+        font-size: 16px;
+    }
 
-/* *STYLEMEDIA: 페이지 - 모바일 소 (480px 이하) */
-@media (max-width: 480px) {
+    .landing .banner h2 {
+        font-size: 30px;
+    }
+
+    .landing .benefit,
+    .landing .care {
+        gap: 25px;
+    }
+
+    .landing .benefit {
+        padding: 48px 0 0 0;
+    }
+
+    .landing .benefit .left {
+        margin-bottom: 48px;
+    }
+
+    .landing .benefit img {
+        width: 120px;
+    }
+
+    .landing .care img {
+        max-width: 140px;
+    }
+
+    .landing .text_wrap p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .landing .text_wrap h3 {
+        font-size: 22px;
+    }
+
+    .situation {
+        padding: 48px 10px;
+    }
+
+    .situation h3 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .situation .status .item {
+        padding: 15px 18px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .situation .status .s_left {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .situation .status .badge,
+    .situation .status .type {
+        padding: 4px 8px;
+    }
+
+    .situation .status .name {
+        flex: 1 1 100%; /* 전체 너비, 새 줄 */
+        margin-top: 5px;
+    }
+
+    .situation .status .description {
+        flex: 1 1 100%; /* 전체 너비, 새 줄 */
+        margin-top: 3px;
+    }
+
+    .situation .status .amount {
+        align-self: flex-end;
+        margin-top: 8px;
+    }
+
+    .landing .apply {
+        padding: 48px 10px;
+    }
+
+    .landing .apply span {
+        font-size: 20px;
+    }
+
+    .landing .apply h3 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .landing .apply .form {
+        width: 100%;
+    }
+
+    .landing .apply .group,
+    .landing .apply .group2 {
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 15px;
+    }
+
+    .landing .apply .f_label {
+        font-size: 18px;
+        text-align: left;
+    }
+
+    .landing .apply .f_input {
+        width: 100%;
+        font-size: 18px;
+        padding: 10px 14px;
+        text-align: left;
+    }
+
+    .landing .apply .location_group {
+        width: 100%;
+    }
+
+    .landing .apply .location_item {
+        font-size: 18px;
+        padding: 10px 14px;
+    }
+
+    .landing .submit_btn {
+        font-size: 16px;
+        padding: 16px;
+    }
+
+    .landing .apply select {
+        text-align: left;
+    }
 }

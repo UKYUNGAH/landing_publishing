@@ -14,9 +14,9 @@
         <!-- Open Graph (카카오톡, 페이스북 공유) -->
         <meta property="og:type" content="website" />
         <meta property="og:title" content="FM에셋 - 보험 영업의 새로운 기준" />
-        <meta property="og:description" content="2000년 설립, 25년 업력의 대형 GA. FC/지사장/센터장 모집 중" />
+        <meta property="og:description" content="" />
         <meta property="og:image" content="./images/og_img.svg" />
-        <meta property="og:url" content="" />
+        <meta property="og:url" content="보험사가 알려주지 않아 놓친 돈! 병원 다녀오셨다면 보험금 찾아가세요" />
         <meta property="og:site_name" content="FM에셋" />
 
         <!-- #ISSUE: 임시로 아무이미지나 파비콘 넣어뒀습니다. 맞는 이미지로 대체해주세요! -->
@@ -38,19 +38,195 @@
         <main class="landing">
             <div class="container">
                 <!-- 배너 영역 -->
-                <section class="banner"></section>
+                <section class="banner">
+                    <img src="./images/banner_landing.png" alt="" />
+                    <div class="inner">
+                        <p>보험사가 알려주지 않아 놓친 돈!</p>
+                        <h2>
+                            병원 다녀오셨다면<br />
+                            <span>보험금 찾아가세요</span>
+                        </h2>
+                    </div>
+                </section>
 
                 <!-- 혜택 영역 -->
-                <section class="benefit"></section>
+                <section class="benefit">
+                    <div class="text_wrap left">
+                        <p>
+                            수십,수백만원의<br />
+                            누락된 보험금...
+                        </p>
+                        <h3>
+                            싹 찾아드리는<br />
+                            <span>무료 서비스 혜택</span>
+                        </h3>
+                    </div>
+                    <div class="right">
+                        <img src="./images/s2.png" alt="" />
+                    </div>
+                </section>
 
                 <!-- 케어 영역 -->
-                <section class="care"></section>
+                <section class="care">
+                    <div class="left">
+                        <img src="./images/s3.png" alt="" />
+                    </div>
+                    <div class="text_wrap right">
+                        <p>
+                            서류 떼고, 보내고...<br />
+                            복잡한 청구 과정? NO!!
+                        </p>
+                        <h3>
+                            시작부터 끝까지<br />
+                            <span>전문가가 토탈케어</span>
+                        </h3>
+                    </div>
+                </section>
 
                 <!-- 현황 영역 -->
-                <section class="situation"></section>
+                <section class="situation">
+                    <h3>실시간 신청 & 보험금 찾기 현황</h3>
+                    <!-- 동적으로 생성 -->
+                    <ul class="status">
+                        <!-- JavaScript로 동적 생성 -->
+                    </ul>
+                </section>
+                <!-- #ISSUE: 하드코딩된 현황 영역 주석 처리 확인 후 삭제하셔도 좋습니다! -->
+                <!-- <section class="situation">
+                    <h3>실시간 신청 & 보험금 찾기 현황</h3>
+                    <ul class="status">
+                        <li class="item">
+                            <div class="s_left">
+                                <span class="badge badge1 completed">수령 완료</span>
+                                <span class="type">누락된 보험금</span>
+                                <span class="name">한○준</span>
+                                <span class="description">모르고 있던 끝절 진단금 특약</span>
+                            </div>
+                            <div class="amount">250,000원</div>
+                        </li>
+
+                        <li class="item">
+                            <div class="s_left">
+                                <span class="badge badge2 pending">수령 완료</span>
+                                <span class="type">일반 청구</span>
+                                <span class="name">유○진</span>
+                                <span class="description">단순 서류 미비로 반려된<br />실손 보험 재청구</span>
+                            </div>
+                            <div class="amount">150,000원</div>
+                        </li>
+
+                        <li class="item">
+                            <div class="s_left">
+                                <span class="badge badge1 completed">수령 완료</span>
+                                <span class="type">누락된 보험금</span>
+                                <span class="name">고○원</span>
+                                <span class="description">7년 전 상해사고 관련<br />추유장애 특약 발견</span>
+                            </div>
+                            <div class="amount">28,000,000원</div>
+                        </li>
+
+                        <li class="item">
+                            <div class="s_left">
+                                <span class="badge badge2 pending">수령 완료</span>
+                                <span class="type">일반 청구</span>
+                                <span class="name">노○혁</span>
+                                <span class="description">해외병원 이용 관련<br />복잡한 서류 번역 및 청구</span>
+                            </div>
+                            <div class="amount">5,000,000원</div>
+                        </li>
+
+                        <li class="item">
+                            <div class="s_left">
+                                <span class="badge badge1 completed">수령 완료</span>
+                                <span class="type">누락된 보험금</span>
+                                <span class="name">송○희</span>
+                                <span class="description">응급실 내원 특약<br />미사용분 소급 청구</span>
+                            </div>
+                            <div class="amount">720,000원</div>
+                        </li>
+                    </ul>
+                </section> -->
 
                 <!-- 신청 영역 -->
-                <section class="apply"></section>
+                <section class="apply">
+                    <span>혹시 나도 못받은 보험금이 있을까?</span>
+                    <h3>궁금하다면 지금 바로 <br class="m_br" />확인 신청하세요!</h3>
+
+                    <!-- 신청 폼 -->
+                    <form class="form">
+                        <!-- 이름 입력 -->
+                        <div class="group">
+                            <label for="name" class="f_label">이름</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                class="f_input"
+                                placeholder="실명을 입력해 주세요"
+                                required
+                            />
+                        </div>
+
+                        <!-- 연락처 입력 -->
+                        <div class="group">
+                            <label for="phone" class="f_label">연락처</label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                class="f_input"
+                                placeholder="010-0000-0000"
+                                pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+                                required
+                            />
+                        </div>
+
+                        <!-- 지역 선택 -->
+                        <div class="group2">
+                            <label class="f_label">지역</label>
+                            <div class="location_group">
+                                <!-- 시/도 선택 -->
+                                <div class="location_item">
+                                    <div class="custom_select">
+                                        <select id="province" name="province" required>
+                                            <option value="">시 / 도</option>
+                                            <option value="seoul">서울특별시</option>
+                                            <option value="busan">부산광역시</option>
+                                            <option value="daegu">대구광역시</option>
+                                            <option value="incheon">인천광역시</option>
+                                            <option value="gwangju">광주광역시</option>
+                                            <option value="daejeon">대전광역시</option>
+                                            <option value="ulsan">울산광역시</option>
+                                            <option value="sejong">세종특별자치시</option>
+                                            <option value="gyeonggi">경기도</option>
+                                            <option value="gangwon">강원도</option>
+                                            <option value="chungbuk">충청북도</option>
+                                            <option value="chungnam">충청남도</option>
+                                            <option value="jeonbuk">전라북도</option>
+                                            <option value="jeonnam">전라남도</option>
+                                            <option value="gyeongbuk">경상북도</option>
+                                            <option value="gyeongnam">경상남도</option>
+                                            <option value="jeju">제주특별자치도</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- 시/군/구 선택 -->
+                                <div class="location_item">
+                                    <div class="custom_select">
+                                        <select id="district" name="district" required>
+                                            <option value="">시/군/구</option>
+                                            <!-- 동적으로 옵션이 추가될 예정 -->
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 신청 버튼 -->
+                        <button type="submit" class="submit_btn">지금 바로 확인 신청하기</button>
+                    </form>
+                </section>
             </div>
         </main>
         <script src="./js/script.js"></script>
