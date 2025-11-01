@@ -446,9 +446,11 @@
     .landing .banner {
         height: 230px;
     }
+
     .landing .banner img {
         height: 100%;
     }
+    
     .landing .banner p {
         font-size: 16px;
         margin: 0 0 16px 0;
