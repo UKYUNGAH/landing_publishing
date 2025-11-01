@@ -443,12 +443,19 @@
 
 /* *STYLEMEDIA: 페이지 - 600px 이하 */
 @media (max-width: 600px) {
+    .landing .banner {
+        height: 230px;
+    }
+    .landing .banner img {
+        height: 100%;
+    }
     .landing .banner p {
         font-size: 16px;
+        margin: 0 0 16px 0;
     }
 
     .landing .banner h2 {
-        font-size: 30px;
+        font-size: 29px;
     }
 
     .landing .benefit,
