@@ -205,7 +205,7 @@
     align-items: center;
 }
 
-.landing .apply span {
+.landing .apply .sub_title {
     display: block;
     margin-bottom: 10px;
     font-size: 22px;
@@ -259,7 +259,7 @@
 .landing .apply .group2 {
     display: flex;
     align-items: center;
-    margin-bottom: 24px;
+    margin-bottom: 40px;
 }
 
 .landing .apply .location_group {
@@ -306,7 +306,7 @@
     background: url('../images/arr_down.png') center center / contain no-repeat;
 }
 
-.landing .submit_btn {
+.landing .apply .submit_btn {
     width: 100%;
     padding: 20px;
     background: var(--bs-white);
@@ -318,14 +318,83 @@
     font-family: 'JalnanGothicT', 'PAPERLOGY', sans-serif;
 }
 
-.landing .submit_btn:hover {
+.landing .apply .submit_btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     background: #f8f9ff;
 }
 
-.landing .submit_btn:active {
+.landing .apply .submit_btn:active {
     transform: translateY(0);
+}
+/* ====================== 동의 체크박스 영역 ====================== */
+.landing .apply .agree_section {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.landing .apply .agree_item,
+.landing .apply .agree_all {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.landing .apply .agree_section input[type='checkbox'] {
+    position: relative;
+    width: 14px;
+    height: 14px;
+    min-width: 14px;
+    margin-right: 10px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    /* border: 2px solid rgba(255, 255, 255, 0.7); */
+    border: 2px solid var(--bs-white);
+    border-radius: 3px;
+    background: transparent;
+    transition: all 0.2s;
+}
+
+.landing .apply .agree_section input[type='checkbox']:checked {
+    background: var(--bs-white);
+    border-color: var(--bs-white);
+}
+
+.landing .apply .agree_section input[type='checkbox']:checked::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--bs-blue);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.landing .apply .agree_item label,
+.landing .apply .agree_all label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--bs-white);
+    font-size: 13px;
+}
+
+.landing .apply .agree_all {
+    padding-bottom: 8px;
+    border-bottom: 1px solid #fff;
+}
+
+.landing .apply .view_btn {
+    padding: 1px 6px;
+    background: var(--bs-white);
+    color: var(--bs-blue);
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 8px;
 }
 
 /* ====================== 반응형 스타일 ====================== */
@@ -536,7 +605,7 @@
         padding: 48px 10px;
     }
 
-    .landing .apply span {
+    .landing .apply .sub_title {
         font-size: 20px;
     }
 
@@ -553,7 +622,7 @@
     .landing .apply .group2 {
         flex-direction: column;
         align-items: stretch;
-        margin-bottom: 15px;
+        margin-bottom: 30px;
     }
 
     .landing .apply .f_label {

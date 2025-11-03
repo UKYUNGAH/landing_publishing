@@ -537,6 +537,7 @@ function updateStatusList() {
     currentIndex = (currentIndex + 1) % insuranceData.length;
 }
 
+// ====================== DOMContentLoaded ======================
 document.addEventListener('DOMContentLoaded', function () {
     // 초기 리스트 렌더링
     initStatusList();
@@ -544,7 +545,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // 3초마다 리스트 업데이트
     setInterval(updateStatusList, 2000);
 
-    // 폰 번호 자동 포맷팅
+    // ====================== 폰 번호 자동 포맷팅 ======================
     const phoneInput = document.getElementById('phone');
     if (phoneInput) {
         phoneInput.addEventListener('input', function (e) {
@@ -571,7 +572,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // ISSUE: 개발 필요 - 전체 지역 데이터 API 연동 또는 완전한 지역 목록 추가 현재는 주요 도시들만
+    // ====================== 지역 선택 ======================
     const districtOptions = {
         seoul: ['강남구', '서초구', '송파구', '마포구', '영등포구', '중구', '종로구', '성동구'],
         busan: ['해운대구', '부산진구', '동래구', '남구', '중구', '서구'],
@@ -629,11 +630,94 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // ISSUE: 개발 필요
+    // ====================== 모달 기능 ======================
+    const modals = document.querySelectorAll('.modal');
+    const viewButtons = document.querySelectorAll('.view_btn');
+    const modalCloseButtons = document.querySelectorAll('.modal_button button');
+
+    // '보기' 버튼 클릭 시 모달 열기 - data-modal 속성 사용
+    viewButtons.forEach((button) => {
+        button.addEventListener('click', function (e) {
+            e.preventDefault();
+            const modalType = this.getAttribute('data-modal');
+
+            // data-modal 값에 따라 해당 모달 열기
+            if (modalType === 'modal1') {
+                modals[0].classList.add('active'); // 첫 번째 모달 (고유식별정보)
+            } else if (modalType === 'modal2') {
+                modals[1].classList.add('active'); // 두 번째 모달 (민감정보)
+            } else if (modalType === 'modal3') {
+                modals[2].classList.add('active'); // 세 번째 모달 (개인정보)
+            }
+
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // 모달 닫기 버튼
+    modalCloseButtons.forEach((button, index) => {
+        button.addEventListener('click', function () {
+            if (modals[index]) {
+                modals[index].classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+
+    // 모달 배경 클릭 시 닫기
+    modals.forEach((modal) => {
+        modal.addEventListener('click', function (e) {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+
+    // ====================== 체크박스 기능 ======================
+    const agree1 = document.getElementById('agree1');
+    const agree2 = document.getElementById('agree2');
+    const agree3 = document.getElementById('agree3');
+    const agreeAll = document.getElementById('agreeAll');
+
+    // 전체 동의 체크박스
+    if (agreeAll) {
+        agreeAll.addEventListener('change', function () {
+            const isChecked = this.checked;
+            if (agree1) agree1.checked = isChecked;
+            if (agree2) agree2.checked = isChecked;
+            if (agree3) agree3.checked = isChecked;
+        });
+    }
+
+    // 개별 체크박스 - 모두 체크되면 전체 동의도 체크
+    [agree1, agree2, agree3].forEach((checkbox) => {
+        if (checkbox) {
+            checkbox.addEventListener('change', function () {
+                if (agree1 && agree2 && agree3 && agreeAll) {
+                    if (agree1.checked && agree2.checked && agree3.checked) {
+                        agreeAll.checked = true;
+                    } else {
+                        agreeAll.checked = false;
+                    }
+                }
+            });
+        }
+    });
+
+    // ====================== 폼 제출 ======================
     const form = document.querySelector('.form');
     if (form) {
         form.addEventListener('submit', function (e) {
             e.preventDefault();
+
+            // 체크박스 검증
+            if (agree1 && agree2 && agree3) {
+                if (!agree1.checked || !agree2.checked || !agree3.checked) {
+                    alert('모든 약관에 동의해주세요.');
+                    return;
+                }
+            }
 
             const formData = new FormData(this);
             const data = Object.fromEntries(formData);
@@ -654,9 +738,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // 폼 리셋
             this.reset();
-            districtSelect.innerHTML = '<option value="">시/군/구</option>';
-            provinceSelect.classList.remove('selected');
-            districtSelect.classList.remove('selected');
+            if (districtSelect) {
+                districtSelect.innerHTML = '<option value="">시/군/구</option>';
+            }
+            if (provinceSelect) provinceSelect.classList.remove('selected');
+            if (districtSelect) districtSelect.classList.remove('selected');
         });
     }
 });
