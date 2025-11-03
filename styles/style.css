@@ -275,7 +275,7 @@
     font-weight: 600;
     text-align: center;
     background: var(--bs-white);
-    padding: 10px 0 10px 10px;
+    padding: 10px 0 10px 0;
     border-radius: 5px;
 }
 
@@ -502,7 +502,7 @@
     .landing .apply .location_item {
         width: 100%;
         font-size: 20px;
-        padding: 12px 0 12px 10px;
+        padding: 12px 0 12px 0;
     }
 
     .landing .submit_btn {
