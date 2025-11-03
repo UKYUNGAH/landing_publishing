@@ -525,6 +525,10 @@
         margin: 0 0 16px 0;
     }
 
+    .landing .banner p::after {
+        width: 40px;
+    }
+
     .landing .banner h2 {
         font-size: 29px;
     }
