@@ -36,7 +36,6 @@
     position: absolute;
     width: 45px;
     height: calc(100% + 4px);
-    background-color: var(--bs-blue);
     top: -2px;
     right: -2px;
     background-color: var(--bs-blue);
