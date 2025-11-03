@@ -35,10 +35,10 @@
     content: '';
     position: absolute;
     width: 45px;
-    height: 100%;
+    height: calc(100% + 4px);
     background-color: var(--bs-blue);
-    top: 0;
-    right: 0;
+    top: -2px;
+    right: -2px;
     background-color: var(--bs-blue);
     background-image: url('../images/search_i.png');
     background-position: center center;
