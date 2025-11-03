@@ -383,7 +383,7 @@
 
 .landing .apply .agree_all {
     padding-bottom: 8px;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .landing .apply .view_btn {
